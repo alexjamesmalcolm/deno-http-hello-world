@@ -3,7 +3,7 @@ name: CD
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           HOST: ${{ secrets.HOST }}
           PROJECT: hello-world
-          BRANCH: main
+          BRANCH: master
