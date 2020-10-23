@@ -18,4 +18,4 @@ ADD . /app
 RUN deno cache main.ts
 
 # These are passed as deno arguments when run with docker:
-CWD ["--allow-net", "main.ts"]
+CMD ["--allow-net", "main.ts"]
