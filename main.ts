@@ -1,6 +1,6 @@
 import { serve } from "./deps.ts";
 
-const server = serve({ port: 3000, hostname: "0.0.0.0" });
+const server = serve({ port: 3000 });
 
 for await (const request of server) {
   let bodyContent = "Your user-agent is:\n\n";
