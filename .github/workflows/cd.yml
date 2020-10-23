@@ -17,3 +17,4 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           HOST: ${{ secrets.HOST }}
           PROJECT: hello-world
+          BRANCH: main
