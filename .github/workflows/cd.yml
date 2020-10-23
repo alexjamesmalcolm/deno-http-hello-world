@@ -16,5 +16,5 @@ jobs:
         env:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           HOST: ${{ secrets.HOST }}
-          PROJECT: hello-world
+          PROJECT: deno-hello-world
           BRANCH: master
