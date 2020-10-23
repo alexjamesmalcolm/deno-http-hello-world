@@ -1,7 +1,8 @@
 import { serve } from "./deps.ts";
 
-const server = serve({ port: 3000 });
-console.log("Starting server on http://0.0.0.0:3000");
+const server = serve({ port: 3001 });
+console.log("Starting server on http://0.0.0.0:3001");
+console.log(Deno.env.toObject());
 
 for await (const request of server) {
   console.log("Received request");
