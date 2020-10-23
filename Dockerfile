@@ -18,4 +18,4 @@ ADD . /app
 RUN deno cache main.ts
 
 # These are passed as deno arguments when run with docker:
-ENTRYPOINT [ "deno", "run", "--allow-net", "main.ts" ]
+ENTRYPOINT deno run --allow-net main.ts
