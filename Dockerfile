@@ -1,6 +1,6 @@
 FROM hayd/ubuntu-deno
 
-EXPOSE 3000
+EXPOSE 3000:3000
 
 WORKDIR /app
 
