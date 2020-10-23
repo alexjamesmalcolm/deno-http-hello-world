@@ -1,5 +1,5 @@
 import { serve } from "./deps.ts";
-const hostname = Deno.env.get("HOSTNAME");
+const hostname = "0.0.0.0";
 const port = 3000;
 const server = serve({ port, hostname });
 console.log(`Starting server on http://${hostname}:${port}`);
