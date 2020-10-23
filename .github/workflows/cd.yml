@@ -17,4 +17,3 @@ jobs:
           PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
           HOST: ${{ secrets.HOST }}
           PROJECT: hello-world
-          APP_CONFIG: ${{ secrets.APP_CONFIG }}
