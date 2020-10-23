@@ -1,21 +1,23 @@
-FROM hayd/deno
+FROM httpd
 
-EXPOSE 3000
+# FROM hayd/deno
 
-WORKDIR /app
+# EXPOSE 3000
 
-# Prefer not to run as root.
-USER deno
+# WORKDIR /app
 
-# Cache the dependencies as a layer (this is re-run only when deps.ts is modified).
-# Ideally this will download and compile _all_ external files used in main.ts.
-COPY deps.ts /app
-RUN deno cache deps.ts
+# # Prefer not to run as root.
+# USER deno
 
-# These steps will be re-run upon each file change in your working directory:
-ADD . /app
-# Compile the main app so that it doesn't need to be compiled each startup/entry.
-RUN deno cache main.ts
+# # Cache the dependencies as a layer (this is re-run only when deps.ts is modified).
+# # Ideally this will download and compile _all_ external files used in main.ts.
+# COPY deps.ts /app
+# RUN deno cache deps.ts
 
-# These are passed as deno arguments when run with docker:
-CMD ["--allow-net", "main.ts"]
+# # These steps will be re-run upon each file change in your working directory:
+# ADD . /app
+# # Compile the main app so that it doesn't need to be compiled each startup/entry.
+# RUN deno cache main.ts
+
+# # These are passed as deno arguments when run with docker:
+# CMD ["--allow-net", "main.ts"]
