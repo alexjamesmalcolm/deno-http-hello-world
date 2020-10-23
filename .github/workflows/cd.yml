@@ -18,3 +18,4 @@ jobs:
           HOST: ${{ secrets.HOST }}
           PROJECT: deno-hello-world
           BRANCH: master
+          FORCE_DEPLOY: true
