@@ -5,7 +5,7 @@ EXPOSE 3000:3000
 WORKDIR /app
 
 # Prefer not to run as root.
-# USER deno
+USER deno
 
 # Cache the dependencies as a layer (this is re-run only when deps.ts is modified).
 # Ideally this will download and compile _all_ external files used in main.ts.
@@ -18,4 +18,4 @@ ADD . /app
 RUN deno cache main.ts
 
 # These are passed as deno arguments when run with docker:
-ENTRYPOINT deno run --allow-net --allow-env main.ts
+CMD ["--allow-net", "--allow-env", "main.ts"]
